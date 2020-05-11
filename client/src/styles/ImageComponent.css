@@ -1,0 +1,60 @@
+#meme-image {
+  position: relative;
+  max-width: 600px;
+  height:100%;
+  max-height: 500px;
+}
+
+#meme-image .meme-text {
+  color: #fff;
+  -webkit-text-stroke: 2px black;
+  -webkit-text-fill-color: white;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 5rem;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  width: 90%;
+  transform: translateX(-50%);
+  border: none;
+  background: none;
+}
+
+.meme-text:first-of-type {
+  top: 10px;
+}
+.meme-text:last-of-type {
+  bottom: 10px;
+}
+
+.yell {
+  text-transform: uppercase;
+}
+
+#meme-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#toolbar {
+  display: flex;
+  flex-direction: column;
+}
+
+#toolbar button {
+  position: relative;
+  margin: 15px;
+}
+
+#toolbar button.yell::after {
+  content: '\f00c';
+  color: green;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 700;
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: -30px;
+  margin-left: 10px;
+}
