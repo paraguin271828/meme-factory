@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const axios = require('axios');
+const cors = require('cors');
 const apiUrl = 'https://api.imageflip.com/get_memes';
 
-router.get('/', (req, res) => {
+router.get('/', cors(), (req, res) => {
     axios.get('https://api.imgflip.com/get_memes')
       .then(result => {
         res.send(result.data.data.memes);
