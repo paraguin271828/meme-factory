@@ -5,6 +5,7 @@ import domtoimage from 'dom-to-image';
 import { saveAs } from 'file-saver';
 import Draggable from 'react-draggable';
 import '../styles/ImageComponent.css';
+import '../styles/fonts.css';
 
 export default () => {
   const [images, setImages] = useState([null]);
