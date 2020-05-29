@@ -2,11 +2,13 @@ import React from 'react';
 import {
     BrowserRouter as Router,
     Switch,
-    Route
+    Route,
+    Redirect
 } from 'react-router-dom';
 import './App.css';
 import ImageComponent from './components/ImageComponent';
 import Menu from './components/Menu';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -15,13 +17,17 @@ function App() {
         <header className="App-header">
           <Menu />
         </header>
-        <section id="main-content">
+        <main id="main-content">
           <Switch>
             <Route path="/getimage">
               <ImageComponent />
             </Route>
+            <Route path="/">
+              <Redirect status={301} from="/" to="/getimage" /> 
+            </Route>
           </Switch>
-        </section>
+        </main>
+        <Footer />
       </Router>
     </div>
   );
